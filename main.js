@@ -23,32 +23,66 @@ function isValidEmail(user){
   }
 }
 
+// if(str.endsWith("@perseverenow.org"))
+
+
 function isValidPassword(str){
-  if(str.length >= 8){
-   return true
-  }if(str.indexOf() >= 1){
-    return true
-  }else{
-    return false
-    }
-  }
-  
-  function isRegisteredUser(name){
-    if(name.indexOf("user1") >= 1){
-      return true
-    }if(name.indexOf("user2") >= 1){
-      return true
-    }if(name.indexOf("user3") >= 1){
+  if(str.length >= 8 && 
+    str !== str.toUpperCase() &&   //check for a lower case letter
+    str !== str.toLowerCase()){    //check for a upper case letter
       return true
     }else{
       return false
     }
   }
 
-function passwordMatches(){
+
+  function isRegisteredUser(name){
+    if(name === user1){
+      return true
+    }if(name === user2){
+      return true
+    }if(name === user3){
+      return true
+    }else{
+      return false
+    }
+  }
 
 
+  // STEVEN'S WAY BELOW
+// function isRegisteredUser(str){
+//   if(str === user1 || str === user2 || str === user3){
+//     return true
+//   } else{
+//     return false
+//   }
+// }
+
+// return str === user1 || str === user2 || str === user3    [Shorthand]
+
+
+
+function passwordMatches(user, pass){
+  if(user === user1 && pass === password1){
+    return true
+  } if(user === user2 && pass === password2){
+    return true
+  }if(user === user3 && pass === password3){
+    return true
+  } else{
+    return false
+  }
 }
+
+
+// Shorthand & "precise code"
+//  return user === user1 && pass === password1 ||
+       //  user === user2 && pass === password2 ||
+      //  user === user3 && pass === password3
+
+
+
 // Our code below. Do not touch!
 
 
